@@ -30,6 +30,7 @@ export interface CrossChainNameServiceLookupInterface extends utils.Interface {
   functions: {
     "acceptOwnership()": FunctionFragment;
     "lookup(string)": FunctionFragment;
+    "nameToAddress(string)": FunctionFragment;
     "owner()": FunctionFragment;
     "register(string,address)": FunctionFragment;
     "setCrossChainNameServiceAddress(address)": FunctionFragment;
@@ -40,6 +41,7 @@ export interface CrossChainNameServiceLookupInterface extends utils.Interface {
     nameOrSignatureOrTopic:
       | "acceptOwnership"
       | "lookup"
+      | "nameToAddress"
       | "owner"
       | "register"
       | "setCrossChainNameServiceAddress"
@@ -52,6 +54,10 @@ export interface CrossChainNameServiceLookupInterface extends utils.Interface {
   ): string;
   encodeFunctionData(
     functionFragment: "lookup",
+    values: [PromiseOrValue<string>]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "nameToAddress",
     values: [PromiseOrValue<string>]
   ): string;
   encodeFunctionData(functionFragment: "owner", values?: undefined): string;
@@ -73,6 +79,10 @@ export interface CrossChainNameServiceLookupInterface extends utils.Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "lookup", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "nameToAddress",
+    data: BytesLike
+  ): Result;
   decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "register", data: BytesLike): Result;
   decodeFunctionResult(
@@ -162,6 +172,11 @@ export interface CrossChainNameServiceLookup extends BaseContract {
     ): Promise<ContractTransaction>;
 
     lookup(
+      _name: PromiseOrValue<string>,
+      overrides?: CallOverrides
+    ): Promise<[string]>;
+
+    nameToAddress(
       arg0: PromiseOrValue<string>,
       overrides?: CallOverrides
     ): Promise<[string]>;
@@ -190,6 +205,11 @@ export interface CrossChainNameServiceLookup extends BaseContract {
   ): Promise<ContractTransaction>;
 
   lookup(
+    _name: PromiseOrValue<string>,
+    overrides?: CallOverrides
+  ): Promise<string>;
+
+  nameToAddress(
     arg0: PromiseOrValue<string>,
     overrides?: CallOverrides
   ): Promise<string>;
@@ -216,6 +236,11 @@ export interface CrossChainNameServiceLookup extends BaseContract {
     acceptOwnership(overrides?: CallOverrides): Promise<void>;
 
     lookup(
+      _name: PromiseOrValue<string>,
+      overrides?: CallOverrides
+    ): Promise<string>;
+
+    nameToAddress(
       arg0: PromiseOrValue<string>,
       overrides?: CallOverrides
     ): Promise<string>;
@@ -274,6 +299,11 @@ export interface CrossChainNameServiceLookup extends BaseContract {
     ): Promise<BigNumber>;
 
     lookup(
+      _name: PromiseOrValue<string>,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    nameToAddress(
       arg0: PromiseOrValue<string>,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
@@ -303,6 +333,11 @@ export interface CrossChainNameServiceLookup extends BaseContract {
     ): Promise<PopulatedTransaction>;
 
     lookup(
+      _name: PromiseOrValue<string>,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    nameToAddress(
       arg0: PromiseOrValue<string>,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;

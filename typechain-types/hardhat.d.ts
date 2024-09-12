@@ -49,6 +49,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IERC165__factory>;
     getContractFactory(
+      name: "CCIPLocalSimulator",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.CCIPLocalSimulator__factory>;
+    getContractFactory(
       name: "CrossChainNameServiceLookup",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.CrossChainNameServiceLookup__factory>;
@@ -110,6 +114,11 @@ declare module "hardhat/types/runtime" {
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.IERC165>;
+    getContractAt(
+      name: "CCIPLocalSimulator",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.CCIPLocalSimulator>;
     getContractAt(
       name: "CrossChainNameServiceLookup",
       address: string,

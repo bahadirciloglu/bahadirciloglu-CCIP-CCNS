@@ -24,6 +24,8 @@ export type { IOwnable } from "./@chainlink/contracts-ccip/src/v0.8/shared/inter
 export { IOwnable__factory } from "./factories/@chainlink/contracts-ccip/src/v0.8/shared/interfaces/IOwnable__factory";
 export type { IERC165 } from "./@chainlink/contracts-ccip/src/v0.8/vendor/openzeppelin-solidity/v4.8.3/contracts/utils/introspection/IERC165";
 export { IERC165__factory } from "./factories/@chainlink/contracts-ccip/src/v0.8/vendor/openzeppelin-solidity/v4.8.3/contracts/utils/introspection/IERC165__factory";
+export type { CCIPLocalSimulator } from "./contracts/CCIPLocalSimulator";
+export { CCIPLocalSimulator__factory } from "./factories/contracts/CCIPLocalSimulator__factory";
 export type { CrossChainNameServiceLookup } from "./contracts/CrossChainNameServiceLookup";
 export { CrossChainNameServiceLookup__factory } from "./factories/contracts/CrossChainNameServiceLookup__factory";
 export type { CrossChainNameServiceReceiver } from "./contracts/CrossChainNameServiceReceiver";
