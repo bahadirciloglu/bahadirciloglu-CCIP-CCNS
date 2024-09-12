@@ -278,7 +278,9 @@ It should log the same address. If it logs the zero address on any of the destin
 
 Project Steps and Outputs
 1.Deploy CCIPLocalSimulator Contract:
+
 CCIPLocalSimulator deployed to: 0x2935eCc208C60D7d0Ae2ae4C83b8A856cefb93f5
+
 2.Retrieve Router Address using configuration() function:
 Router Address: 0x094Df95b449ddB51e837Ec38A64Af35027C0677e
 3.Deploy CrossChainNameService Contracts:
