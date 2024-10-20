@@ -284,7 +284,7 @@ CCIPLocalSimulator deployed to: 0x2935eCc208C60D7d0Ae2ae4C83b8A856cefb93f5
 
 2.Retrieve Router Address using configuration() function:
 
-Router Address: 0x094Df95b449ddB51e837Ec38A64Af35027C0677e
+Router Address: 0x094D...0677e
 
 3.Deploy CrossChainNameService Contracts:
 
@@ -292,19 +292,19 @@ Deploy CrossChainNameServiceRegister.sol, CrossChainNameServiceReceiver.sol, and
 
 Enable chains using enableChain() function:
 
-Deploying contracts with the account: 0x094Df95b449ddB51e837Ec38A64Af35027C0677e
+Deploying contracts with the account: 0x094D...0677e
 
 4.Set CrossChainNameService Address:
 
 For the source instance of CrossChainNameServiceLookup.sol, call setCrossChainNameServiceAddress and provide the address of CrossChainNameServiceRegister.sol.
 
-Deploying contracts with the account: 0x094Df95b449ddB51e837Ec38A64Af35027C0677e
+Deploying contracts with the account: 0x094D...0677e
 
 5.Set CrossChainNameService Address for Receiver:
 
 Repeat the above step for the receiver instance, providing the address of CrossChainNameServiceReceiver.sol.
 
-Deploying contracts with the account: 0x094Df95b449ddB51e837Ec38A64Af35027C0677e
+Deploying contracts with the account: 0x094D...0677e
 
 6.Register Name:
 
@@ -312,7 +312,7 @@ Call the register() function with the arguments "alice.ccns" and Alice's EOA add
 
 npx hardhat run scripts/registerName.ts --network ethereumSepolia
 
-Calling the register() function with the account: 0x094Df95b449ddB51e837Ec38A64Af35027C0677e
+Calling the register() function with the account: 0x094D...0677e
 
 Registered name: alice.ccns
 
@@ -322,7 +322,7 @@ Call the lookup() function with the argument "alice.ccns" to verify the register
 
 npx hardhat run scripts/lookupName.ts --network ethereumSepolia
 
-Looking up the registered name with the account: 0x094Df95b449ddB51e837Ec38A64Af35027C0677e
+Looking up the registered name with the account: 0x094D...0677e
 
 
 
