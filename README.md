@@ -276,7 +276,7 @@ npx hardhat ccns-lookup --ccns-name anon.ccns --network avalancheFuji
 
 It should log the same address. If it logs the zero address on any of the destination blockchains double-check the CCIP explorer to confirm that the `register` message is being finalized.
 
-Project Steps and Outputs
+#### Project Steps and Outputs
 
 1.Deploy CCIPLocalSimulator Contract:
 
@@ -292,7 +292,10 @@ Router Address: 0x094D...0677e
 
 3.Deploy CrossChainNameService Contracts:
 
-Deploy CrossChainNameServiceRegister.sol, CrossChainNameServiceReceiver.sol, and CrossChainNameServiceLookup.sol
+Deploy 
+CrossChainNameServiceRegister.sol
+CrossChainNameServiceReceiver.sol
+CrossChainNameServiceLookup.sol
 
 Enable chains using enableChain() function:
 ```
