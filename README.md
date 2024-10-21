@@ -325,9 +325,9 @@ Call the register() function with the arguments "alice.ccns" and Alice's EOA add
 npx hardhat run scripts/registerName.ts --network ethereumSepolia
 
 Calling the register() function with the account: 0x094D...0677e
-```
 
 Registered name: alice.ccns
+```
 
 
 7.Lookup Registered Name:
@@ -336,7 +336,6 @@ Call the lookup() function with the argument "alice.ccns" to verify the register
 
 ```
 npx hardhat run scripts/lookupName.ts --network ethereumSepolia
-
 Looking up the registered name with the account: 0x094D...0677e
 ```
 
